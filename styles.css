@@ -7,7 +7,7 @@ button { cursor: pointer; }
 .app-shell { width: min(1180px, calc(100% - 48px)); margin: auto; }
 .topbar { height: 86px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
 .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 800; letter-spacing: -.04em; }
-.early-access { color: var(--muted); font: 10px 'DM Mono', monospace; font-weight: 400; letter-spacing: .04em; }
+.update-anouncements { color: var(--muted); font: 10px 'DM Mono', monospace; font-weight: 400; letter-spacing: .04em; }
 .brand-mark { display: grid; place-items: center; width: 30px; height: 30px; background: var(--ink); color: var(--paper); border-radius: 4px; font-size: 13px; }
 .topbar-actions { display: flex; align-items: center; gap: 15px; }
 .status-pill { color: var(--muted); font: 11px 'DM Mono', monospace; text-transform: uppercase; letter-spacing: .08em; }
