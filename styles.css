@@ -87,6 +87,35 @@ body.halloween-mode .connect-cell.y { background: #b9ce58; }
 	.game-heading { margin-bottom: 12px; }
 	.game-stage { width: 100%; }
 }
+.card-chess { background: #bed6c8; }
+.card-pong { background: #9fc6d3; }
+.pong-art { position: relative; width: 110px; height: 88px; border: 2px solid var(--ink); background: #c5e0dc; }
+.pong-art::after { position: absolute; top: 12px; right: 8px; left: 8px; border-top: 2px dashed #20262477; content: ''; }
+.pong-art i { position: absolute; bottom: 8px; left: 50%; width: 42px; height: 7px; background: var(--ink); transform: translateX(-50%); }
+.pong-art em { position: absolute; top: 31px; left: 56px; width: 11px; height: 11px; border-radius: 50%; background: var(--lime); }
+body:not(.chess-only-view) .game-card[data-game="chess"] { display: none; }
+body:not(.chess-only-view) .game-card[data-game="pong"] { display: none; }
+body.chess-only-view .game-card:not([data-game="chess"]):not([data-game="pong"]) { display: none; }
+.chess-return-button { display: none; align-items: center; gap: 10px; width: max-content; min-height: 42px; margin: 0 0 18px; border: 1px solid var(--line); border-radius: 4px; padding: 0 13px; color: var(--ink); font-size: 12px; font-weight: 800; text-decoration: none; }
+.chess-return-button span { color: var(--coral); font-size: 18px; }
+.chess-return-button:hover { background: var(--lime); }
+.chess-return-button:focus-visible { outline: 2px solid var(--coral); outline-offset: 2px; }
+body.chess-only-view .chess-return-button { display: inline-flex; }
+.chess-art { display: grid; place-items: center; width: 96px; height: 96px; color: var(--ink); font: 82px Georgia, serif; }
+.chess-board { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); width: min(100%, 440px); aspect-ratio: 1; margin: 0 auto; overflow: hidden; border: 3px solid var(--ink); border-radius: 4px; }
+.chess-square { position: relative; display: grid; place-items: center; min-width: 0; border: 0; padding: 0; font: clamp(24px, 7vw, 48px) Georgia, serif; line-height: 1; }
+.chess-square.light { background: #f0e7d6; }
+.chess-square.dark { background: #6b8b78; }
+.chess-square.white-piece { color: #fffdf8; text-shadow: 0 1px 2px #202624, 1px 0 1px #202624, -1px 0 1px #202624; }
+.chess-square.black-piece { color: #202624; text-shadow: 0 1px 1px #ffffff88; }
+.chess-square.selected { box-shadow: inset 0 0 0 4px var(--coral); }
+.chess-square.legal-target::after { position: absolute; width: 22%; aspect-ratio: 1; border-radius: 50%; background: #20262455; content: ''; }
+.chess-square.capture-target::after { position: absolute; inset: 4px; border: 4px solid #ed7957bb; border-radius: 50%; content: ''; }
+.chess-square:focus-visible { z-index: 1; outline: 3px solid var(--lime); outline-offset: -3px; }
+body.halloween-mode .card-chess { background: #a5bf61; }
+body.halloween-mode .chess-square.light { background: #f0e1cb; }
+body.halloween-mode .chess-square.dark { background: #78984a; }
+body.halloween-mode .chess-square.selected { box-shadow: inset 0 0 0 4px var(--coral); }
 .mine-level { display: inline-flex; align-items: center; gap: 7px; margin-right: 6px; color: var(--muted); font: 10px 'DM Mono', monospace; text-transform: uppercase; letter-spacing: .05em; }.mine-level select { border: 1px solid var(--line); border-radius: 4px; padding: 7px 20px 7px 7px; background: #fffdf8; color: var(--ink); font: 12px Manrope, sans-serif; }.mine-controls .control-button.active { background: var(--lime); }
 .support-panel { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 18px; padding: 20px 0 32px; border-top: 1px solid var(--line); }.support-panel h2 { margin: 0; font-size: 22px; letter-spacing: -.05em; }.support-panel .eyebrow { margin-bottom: 8px; }.support-link { display: inline-flex; align-items: center; gap: 18px; padding: 11px 14px; border-radius: 4px; background: #f3c85b; color: var(--ink); font-size: 13px; font-weight: 800; text-decoration: none; }.support-link span { font-size: 20px; }.support-link:hover { background: #edb93f; }
 @media (max-width: 700px) { .support-panel { display: grid; gap: 12px; } }
@@ -245,6 +274,14 @@ body.halloween-mode .darts-aim::after { background: #000; }
 body.halloween-mode .darts-dart::before,
 body.halloween-mode .darts-dart::after { background: var(--coral); }
 
+.owner-login-form { display: grid; gap: 9px; }
+.owner-login-form label { margin-top: 5px; color: var(--muted); font: 10px 'DM Mono', monospace; letter-spacing: .08em; text-transform: uppercase; }
+.owner-login-form input { width: 100%; min-height: 44px; border: 1px solid var(--line); border-radius: 4px; padding: 10px 12px; background: #fffdf8; color: var(--ink); font: 14px Manrope, sans-serif; }
+.owner-login-form input:focus { outline: 2px solid var(--blue); outline-offset: 1px; }
+.owner-login-form .submit-button { margin-top: 10px; }
+.owner-login-status { margin: 4px 0 0; color: var(--muted); font-size: 12px; line-height: 1.5; }
+body.halloween-mode .owner-login-form input { border-color: var(--line); background: var(--surface); color: var(--ink); }
+
 .card-clicker { background: #efd39a; }
 .card-dash { background: #b9dc9b; }
 .dash-art { display: flex; align-items: end; justify-content: center; gap: 5px; width: 76px; height: 54px; padding-bottom: 6px; border-bottom: 4px solid var(--ink); }
@@ -328,4 +365,39 @@ body.halloween-mode .block-cell.purple { box-shadow: inset 0 0 0 2px #2b1833, 0 
 @media (max-width: 700px) {
 	.brand .update-anouncements { display: none; }
 	.topbar-actions { gap: 8px; }
+}
+
+.owner-tools { display: flex; align-items: center; gap: 16px; }
+.owner-heading { margin: 0; font-size: 16px; font-weight: 800; letter-spacing: 0; }
+.owner-hack-button { min-width: 88px; min-height: 40px; border: 0; border-radius: 4px; padding: 0 14px; background: var(--ink); color: var(--paper); font-size: 13px; font-weight: 800; }
+.owner-hack-button:hover { background: #34423d; }
+.owner-hack-button[aria-pressed="true"] { background: var(--coral); color: var(--ink); }
+.owner-hack-button:focus-visible { outline: 2px solid var(--coral); outline-offset: 3px; }
+.owner-content { padding: 36px 0; }
+.owner-content .eyebrow { margin-bottom: 8px; }
+.owner-status { color: var(--muted); font-size: 14px; }
+.owner-page-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0 30px; }
+.owner-action-button { display: inline-flex; align-items: center; gap: 16px; min-height: 42px; border: 1px solid var(--ink); border-radius: 4px; padding: 0 14px; background: var(--ink); color: var(--paper); font-size: 12px; font-weight: 800; text-decoration: none; }
+.owner-action-button span { color: var(--lime); font-size: 18px; }
+.owner-action-button.secondary { border-color: var(--line); background: transparent; color: var(--ink); }
+.owner-action-button.secondary span { color: var(--coral); }
+.owner-score-panel { padding-top: 22px; border-top: 1px solid var(--line); }
+.owner-score-panel[hidden] { display: none; }
+.owner-score-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 14px; }
+.owner-score-heading h2 { margin: 0; font-size: 22px; }
+.owner-score-heading p { margin: 0; color: var(--muted); font-size: 12px; }
+.owner-score-list { display: grid; border-top: 1px solid var(--line); }
+.owner-score-row { display: grid; grid-template-columns: minmax(0, 1fr) 110px 72px; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.owner-score-row label { font-size: 13px; font-weight: 700; }
+.owner-score-row input { width: 100%; min-width: 0; min-height: 38px; border: 1px solid var(--line); border-radius: 4px; padding: 7px 9px; background: #fffdf8; color: var(--ink); font: 13px 'DM Mono', monospace; }
+.owner-score-row input:focus { outline: 2px solid var(--blue); outline-offset: 1px; }
+.owner-score-row .submit-button { justify-self: stretch; padding: 10px; }
+body.halloween-mode .owner-score-row input { border-color: var(--line); background: var(--surface); color: var(--ink); }
+@media (max-width: 700px) { .owner-tools { gap: 10px; } }
+@media (max-width: 480px) {
+	.owner-score-heading { display: block; }
+	.owner-score-heading p { margin-top: 5px; }
+	.owner-score-row { grid-template-columns: minmax(0, 1fr) 88px; gap: 8px; }
+	.owner-score-row label { grid-column: 1 / -1; }
+	.owner-score-row .submit-button { grid-column: 2; }
 }
