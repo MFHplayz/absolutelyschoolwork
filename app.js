@@ -884,7 +884,7 @@ const ownerOpen = document.querySelector('#owner-open');
 const ownerUsername = document.querySelector('#owner-username');
 const ownerPassword = document.querySelector('#owner-password');
 const ownerLoginStatus = document.querySelector('#owner-login-status');
-const ownerSessionKey = 'definitelyschoolwork-owner-session';
+const ownerSessionKey = 'absolutely-school-work-owner-session';
 
 function updateOwnerAccessVisibility() {
   const chessOnlyView = window.location.hash === '#work';

@@ -1,4 +1,4 @@
-if (sessionStorage.getItem('definitelyschoolwork-owner-session') !== 'active') {
+if (sessionStorage.getItem('absolutely-school-work-owner-session') !== 'active') {
   window.location.replace('index.html');
 }
 
