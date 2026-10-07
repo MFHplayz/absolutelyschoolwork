@@ -1,2 +1,2 @@
 Current link:
-https://www.definitelyschoolwork.co.uk/
+https://www.absolutelyschoolwork.com/
